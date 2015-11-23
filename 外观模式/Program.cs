@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace 外观模式
 {
@@ -10,6 +6,7 @@ namespace 外观模式
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(a);
             EatKFC eat = new EatKFC();
             eat.Eat();
             Console.Read();
