@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "工厂模式", "工厂模式\工厂模式.csproj", "{21CCD4E9-DF43-4703-B6F1-68109DEF4B4F}"
 EndProject
@@ -28,6 +28,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "组合模式", "组合模式\组合模式.csproj", "{CEA34B15-87AA-4AB3-A671-2F7087B58272}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "外观模式", "外观模式\外观模式.csproj", "{420D742A-E45A-4202-8414-E7CCA199941B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "享元模式", "享元模式\享元模式.csproj", "{D71568C6-0896-45DA-9D21-60C2494D512D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "代理模式", "代理模式\代理模式.csproj", "{AF4C4F22-EC30-48E7-A28E-9FA100703CFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "行为型设计模式", "行为型设计模式", "{EBC40AB7-F64A-439B-9516-9445D56C1606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,14 @@ Global
 		{420D742A-E45A-4202-8414-E7CCA199941B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420D742A-E45A-4202-8414-E7CCA199941B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420D742A-E45A-4202-8414-E7CCA199941B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71568C6-0896-45DA-9D21-60C2494D512D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71568C6-0896-45DA-9D21-60C2494D512D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71568C6-0896-45DA-9D21-60C2494D512D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71568C6-0896-45DA-9D21-60C2494D512D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4C4F22-EC30-48E7-A28E-9FA100703CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4C4F22-EC30-48E7-A28E-9FA100703CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4C4F22-EC30-48E7-A28E-9FA100703CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4C4F22-EC30-48E7-A28E-9FA100703CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,5 +109,7 @@ Global
 		{A20EEAF2-3442-4739-81F4-A36926C5ED06} = {2BE55FFA-2CD7-455E-937E-206A089C8AD8}
 		{CEA34B15-87AA-4AB3-A671-2F7087B58272} = {2BE55FFA-2CD7-455E-937E-206A089C8AD8}
 		{420D742A-E45A-4202-8414-E7CCA199941B} = {2BE55FFA-2CD7-455E-937E-206A089C8AD8}
+		{D71568C6-0896-45DA-9D21-60C2494D512D} = {2BE55FFA-2CD7-455E-937E-206A089C8AD8}
+		{AF4C4F22-EC30-48E7-A28E-9FA100703CFE} = {2BE55FFA-2CD7-455E-937E-206A089C8AD8}
 	EndGlobalSection
 EndGlobal
