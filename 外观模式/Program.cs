@@ -6,7 +6,7 @@ namespace 外观模式
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(a);
+            Console.WriteLine();
             EatKFC eat = new EatKFC();
             eat.Eat();
             Console.Read();
