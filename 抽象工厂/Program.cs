@@ -2,9 +2,9 @@
 
 namespace 抽象工厂
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("小明第一次跟女神约会");
             Console.WriteLine("由于小明是个小屌丝，所以他使用了恋爱管家APP帮助他制定的A计划");
@@ -22,10 +22,17 @@ namespace 抽象工厂
     }
 
     #region 抽象
+
+    public abstract class Eat
+    {
+        public abstract void GoEat();
+    }
+
     public abstract class LoveManageApp
     {
-        public abstract Movie ReadMovie();
         public abstract Eat ReadEat();
+
+        public abstract Movie ReadMovie();
     }
 
     public abstract class Movie
@@ -33,12 +40,18 @@ namespace 抽象工厂
         public abstract void GoMovie();
     }
 
-    public abstract class Eat
-    {
-        public abstract void GoEat();
-    }
-    #endregion
+    #endregion 抽象
+
     #region 实现
+
+    public class Kfc : Eat
+    {
+        public override void GoEat()
+        {
+            Console.WriteLine("出发去肯德基，吃饭");
+        }
+    }
+
     public class LoveManageA : LoveManageApp
     {
         public override Eat ReadEat()
@@ -51,6 +64,7 @@ namespace 抽象工厂
             return new UMEMovie();
         }
     }
+
     public class LoveManageB : LoveManageApp
     {
         public override Eat ReadEat()
@@ -63,20 +77,7 @@ namespace 抽象工厂
             return new WanDaMovie();
         }
     }
-    public class UMEMovie : Movie
-    {
-        public override void GoMovie()
-        {
-            Console.WriteLine("出发去UME国际影城，看电影");
-        }
-    }
-    public class WanDaMovie : Movie
-    {
-        public override void GoMovie()
-        {
-            Console.WriteLine("出发去万达国际影城，看电影");
-        }
-    }
+
     public class Mc : Eat
     {
         public override void GoEat()
@@ -84,12 +85,22 @@ namespace 抽象工厂
             Console.WriteLine("出发去麦当劳，吃饭");
         }
     }
-    public class Kfc : Eat
+
+    public class UMEMovie : Movie
     {
-        public override void GoEat()
+        public override void GoMovie()
         {
-            Console.WriteLine("出发去肯德基，吃饭");
+            Console.WriteLine("出发去UME国际影城，看电影");
         }
     }
-    #endregion
+
+    public class WanDaMovie : Movie
+    {
+        public override void GoMovie()
+        {
+            Console.WriteLine("出发去万达国际影城，看电影");
+        }
+    }
+
+    #endregion 实现
 }

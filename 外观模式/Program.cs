@@ -2,26 +2,28 @@
 
 namespace 外观模式
 {
-    class Program
+    public class BuyKFC
     {
-        static void Main(string[] args)
+        public bool Buy()
         {
-            Console.WriteLine();
-            EatKFC eat = new EatKFC();
-            eat.Eat();
-            Console.Read();
+            Console.WriteLine("去最近的KFC，进行购买");
+            return true;
         }
     }
 
     public class EatKFC
     {
-        private LookKFC lookKfc;
         private BuyKFC buyKfc;
-        public EatKFC() {
+        private LookKFC lookKfc;
+
+        public EatKFC()
+        {
             lookKfc = new LookKFC();
             buyKfc = new BuyKFC();
         }
-        public void Eat() {
+
+        public void Eat()
+        {
             if (lookKfc.Look())
             {
                 if (buyKfc.Buy())
@@ -42,15 +44,17 @@ namespace 外观模式
         {
             Console.WriteLine("正在查询最接近的KFC");
             return true;
-        }        
+        }
     }
 
-    public class BuyKFC
+    internal class Program
     {
-        public bool Buy()
+        private static void Main(string[] args)
         {
-            Console.WriteLine("去最近的KFC，进行购买");
-            return true;
+            Console.WriteLine();
+            EatKFC eat = new EatKFC();
+            eat.Eat();
+            Console.Read();
         }
     }
 }

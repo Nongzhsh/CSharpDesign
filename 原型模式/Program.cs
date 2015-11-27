@@ -2,9 +2,35 @@
 
 namespace 原型模式
 {
-    class Program
+    public class CopySomeMing : SomeMing
     {
-        static void Main(string[] args)
+        public CopySomeMing(string strName)
+            : base(strName)
+        {
+        }
+
+        public override SomeMing Copy()
+        {
+            return (SomeMing)this.MemberwiseClone();
+        }
+    }
+
+    public abstract class SomeMing
+    {
+        public SomeMing(string Name)
+        {
+            this.strName = Name;
+            Console.WriteLine("小明出发去找女神");
+        }
+
+        public string strName { get; set; }
+
+        public abstract SomeMing Copy();
+    }
+
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
             SomeMing m = new CopySomeMing("小明");
             Console.WriteLine("女神说：小明，马上给我买一份肯德基，一份麦当劳，一份必胜客回来。速去速去");
@@ -15,26 +41,6 @@ namespace 原型模式
             Console.WriteLine(m2.strName);
             Console.WriteLine(m3.strName);
             Console.ReadLine();
-        }
-    }
-
-    public abstract class SomeMing
-    {
-        public string strName { get; set; }
-        public SomeMing(string Name) {
-            this.strName = Name;
-            Console.WriteLine("小明出发去找女神");
-        }
-        public abstract SomeMing Copy();
-    }
-
-    public class CopySomeMing:SomeMing
-    {
-        public CopySomeMing(string strName):base(strName) { }
-
-        public override SomeMing Copy()
-        {
-            return (SomeMing)this.MemberwiseClone();
         }
     }
 }
