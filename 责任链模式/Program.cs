@@ -2,6 +2,19 @@
 
 namespace 责任链模式
 {
+    //小明，如果小明的好感提升，那么就可以让更多的人参谋
+    public class SomeM
+    {
+        public string Name { get; set; }
+        public int GoodWill { get; set; }
+
+        public SomeM(string strName, int intGoodWill)
+        {
+            this.Name = strName;
+            this.GoodWill = intGoodWill;
+        }
+    }
+
     //女神让其他人看看小明，帮着参谋参谋
     public abstract class Participate
     {
@@ -17,19 +30,6 @@ namespace 责任链模式
         }
 
         public abstract void Meet(SomeM m);
-    }
-
-    //小明，如果小明的好感提升，那么就可以让更多的人参谋
-    public class SomeM
-    {
-        public string Name { get; set; }
-        public int GoodWill { get; set; }
-
-        public SomeM(string strName, int intGoodWill)
-        {
-            this.Name = strName;
-            this.GoodWill = intGoodWill;
-        }
     }
 
     //女神的朋友

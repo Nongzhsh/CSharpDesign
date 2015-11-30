@@ -65,7 +65,9 @@ namespace 中介者模式
     public class MediatorPater : AbstractMediator
     {
         public MediatorPater(State initState) : base(initState)
-        { }
+        {
+            Console.WriteLine("中介者创建完毕，可以对钱进行操作了");
+        }
     }
 
     #endregion 创建中介者
